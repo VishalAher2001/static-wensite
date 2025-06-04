@@ -11,27 +11,42 @@ body{
     background-color: #0B243E;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-}       
+} 
+.logo{
+     margin: 0px 80px; 
+   
+}      
 
 .logo img{
     height: 47px;
     width: 175px;
+    justify-content: center;
+   
 }
 
 
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     padding: 30px;
+    width: 100%;
+    
+    position: fixed;
+    background-color:  #0a233d;
+   
+   
+    
     
 }
 
 nav ul{
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
     font-size: 16px;
+    padding-left: 10rem;
+
     
     
 }
@@ -39,6 +54,7 @@ nav ul{
 nav ul a{
     color: #fff;
     text-decoration: none;
+    
 }
 nav li {
     list-style: none;
@@ -53,7 +69,7 @@ nav li {
 
 .btn{
     background: linear-gradient(to right, #50A0FF,#4EFFFF);
-    padding: 15px 25px;
+    padding: 15px 30px;
     border-radius: 50px;
     border: none;
     box-shadow: 0px 4px 20px 0px #50A0FF;
@@ -69,8 +85,8 @@ nav li {
 .hero{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px 80px;
+    justify-content: center;
+    padding: 180px 10px;
     max-width: 100%;
     flex-wrap: wrap;
 
@@ -84,9 +100,10 @@ nav li {
 .hero-text h1{
     font-family:  Roboto, sans-serif;
     font-weight: 400;
-    font-size: 72px;
+    font-size: 73px;
     color: #FFFFFF;
     line-height: 80px;
+    max-width:  550px;
 }
 .hero-text p{
     color: #FFFFFF;
@@ -141,7 +158,7 @@ nav li {
       display: grid;
       grid-template-columns: repeat(2, 1fr); 
       
-      gap: 15px;
+      gap: 25px;
       width: 80%;
       margin: auto;
 
@@ -342,10 +359,16 @@ nav li {
     border: 1px solid #FFFFFF;
 }
 
-.service-btn #tab{
-    background-color: #FFFFFF;
+
+.service-btn button:hover{
+    background-color: white;
     color: #000000;
 }
+
+/* .service-btn #tab{
+    background-color: #FFFFFF;
+    color: #000000;
+} */
 .service-content{
     margin: 4rem 0;
     display: flex;
@@ -379,6 +402,7 @@ nav li {
     font-size: 65px;
     line-height: 70px;
     font-family:'Poppins', sans-serif ;
+    
     
 }
 
@@ -604,6 +628,7 @@ nav li {
 
 .technology h1{
     font-weight: 400;
+    line-height: 1.3;
 }
 .tech-content button{ 
     padding: 10px 30px;
@@ -616,6 +641,10 @@ nav li {
     cursor: pointer;
 }
 
+.tech-content button:hover{
+    background-color: #ffff;
+    color: #000000;
+}
 .lang-img{
     display: flex;
     align-items: center;
@@ -665,6 +694,7 @@ nav li {
     align-items: center;
     justify-content: center;
     gap: 10px;
+   
     
     
    
@@ -711,7 +741,7 @@ nav li {
     max-width: 1200px;
     margin:5rem auto;
     align-items: stretch;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 
 }
 .review-content img{
@@ -795,6 +825,7 @@ nav li {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    
     
 }
 
@@ -941,24 +972,31 @@ nav li {
 .copyright{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40rem;
+    justify-content: space-between;
+    max-width: 1240px;
+    
     margin: 0 auto;
-    border: 1px solid #FFFFFF21;
+    /* border: 1px solid #FFFFFF21;  */
 
 
     color: #FFFFFF;
     flex-wrap: wrap;
 }
 
+.footer-copyright{
+     border: 1px solid #FFFFFF21; 
+   
+    
+}
+
 .copyright-text p{
     font-size: 16px;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 
 .copyright-icons i{
-    margin-inline: 10px;
+    margin-inline: 8px;
 }
 
 

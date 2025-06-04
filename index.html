@@ -20,12 +20,12 @@
     </div>
 
     <ul id="menuList">
-         <li><a href="">Home</a></li>
-         <li><a href="">About</a></li>
-         <li><a href="">Services</a></li>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#services">Services</a></li>
          <li><a href="">Testimonials</a></li>
          <li><a href="">Blogs</a></li>
-         <li><a href="">Contact Us</a></li>
+         <li><a href="#contact-us">Contact Us</a></li>
          <button class="btn">Hire Developers <i class="fa-solid fa-arrow-right"></i></button>
     </ul>
      <div class="menu-icon">
@@ -33,9 +33,9 @@
         </div>
 </nav>
 
-<div class="hero">
+<div class="hero" id="home">
     <div class="hero-text">
-        <h1>Light up your <br>success with<br> <span id="in">innovative<br><span id="digital">digital solutions</span></h1>
+        <h1>Light up your success with <span id="in">innovative<span id="digital"> digital solutions</span></h1>
         <p>Accelerating business growth with custom Software</p>
         <button class="btn-2">Plans a Discovery Call <i class="fa-solid fa-arrow-right"></i></button>
     </div>
@@ -60,7 +60,7 @@
         <h1>INNOVATIVE SOLUTIONS</h1>
 </div>
 
-<section class="about-section">
+<section class="about-section" id="about">
     <div class="about-img">
         <img src="img/about.png" alt="about-image">
     </div>
@@ -116,15 +116,15 @@
   </div>
 </section>
 
-<div class="heading">
+<div class="heading" id="services">
         <h1>SERVICES WE OFFER</h1>
 </div>
 
 
-<section class="services-section">
+<section class="services-section" id="service">
     
     <div class="service-btn">
-        <button id="tab">Staff Agumentation</button>
+        <button>Staff Agumentation</button>
          <button>MVP Creation</button>
         <button>Products for Buy</button>
     </div>
@@ -134,7 +134,7 @@
             <img src="img/about.png" alt="Service Image">
         </div>
         <div class="service-text">
-            <h1>Hire<span id="Shubpy">  Remote<br></span>Developers</h1>
+            <h1>Hire<span id="Shubpy"> Remote</span> Developers</h1>
             <p>Experience accelerated business growth with our fully scalable and future-ready solutions. Shubpy Solutions delivers transformative services that elevate your business.</p>
             <ul>
             <li><i class="fas fa-check"></i>100% In-house Developers</li>
@@ -327,7 +327,7 @@ Review Section -->
 </div>
 
 
-<section class="review">
+<section class="review" >
     <div class="review-head">
         <h1>What Our <span id="Shubpy">Clients</span> Are Saying</h1>
     </div>
@@ -436,7 +436,7 @@ Review Section -->
 <!-- Contact US Section -->
 
 
-<section class="Contact">
+<section class="Contact" id="contact-us">
     <div class="contact-text">
         <h1><span id="Shubpy">Hire Us </span>As Your<br>Technical Partner</h1>
         <p>We ensure you get the right talent resource tailored to your specific<br> requirements. Contact us to work with a results-driven IT agency</p>
@@ -544,8 +544,8 @@ Review Section -->
 
 
 
-
-<div class="copyright">
+<div class="footer-copyright">
+    <div class="copyright">
         <div class="copyright-text">
             <p>© Copyright 2025   |   All Rights Reserved</p>
             
@@ -556,6 +556,7 @@ Review Section -->
             <i class="fa-brands fa-twitter"></i>
              <i class="fab fa-linkedin fa-1x"></i>
         </div>
+    </div>
 </div>
 
 <body>
@@ -565,8 +566,7 @@ Review Section -->
 
 
 
-
-    <script>
+ <script>
         
         let menuList = document.getElementById("menuList")
         menuList.style.maxHeight = "0px";
@@ -580,7 +580,46 @@ Review Section -->
                 menuList.style.maxHeight = "0px";
             }
         }
-        
-    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const slides = document.querySelectorAll('.review-box');
+  let count = 0;
+
+  // Set initial left positions
+  slides.forEach(function(slide, index) {
+    slide.style.left = `${index * 100}%`;
+  });
+
+  // Slide function
+  function slider() {
+    slides.forEach(function(curVal) {
+      curVal.style.transform = `translateX(-${count * 100}%)`;
+    });
+  }
+
+  // Auto-slide every 1 second
+  setInterval(function () {
+    count++;
+    if (count === slides.length) {
+      count = 0;
+    }
+    slider();
+  }, 1000); // faster = 1 second
+</script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
