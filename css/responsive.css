@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 905px) {
   nav ul {
     position: absolute;
     top: 100px;
@@ -25,6 +25,21 @@
   .menu-icon i {
     display: inline;
     color: #fff;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1187px) {
+  .logo img {
+    height: 35px;
+    width: 100px;
+  }
+  nav ul {
+    font-size: 12px;
+    gap: 25px;
+  }
+  .btn {
+    font-size: 12px;
+    padding: 10px 12px;
   }
 }
 
@@ -160,8 +175,9 @@
     text-align: center;
   }
   .head-text p {
-    margin: 0px 30px;
+    margin: 0px 70px;
     font-size: 15px;
+    max-width: 80%;
   }
   .shubpy-grid {
     grid-template-columns: 1fr;
@@ -251,6 +267,9 @@
 }
 
 @media (min-width: 651px) and (max-width: 950px) {
+  .logo img {
+    margin-left: 10px;
+  }
   nav {
     display: flex;
     align-items: center;
