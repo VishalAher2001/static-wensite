@@ -8,29 +8,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN (v6) -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+
+   <!-- Slick CSS -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
  
 
 </head>
+<body>
 
 <nav>
-    <div class="logo">
+   <div class="nav-container">
+     
+      <div class="logo">
+       
         <img src="img/logo.png" alt="website-logo">
-    </div>
-
-    <ul id="menuList">
+      </div>
+ 
+       <ul>
          <li><a href="#home">Home</a></li>
          <li><a href="#about">About</a></li>
          <li><a href="#services">Services</a></li>
-         <li><a href="">Testimonials</a></li>
+         <li><a href="#test">Testimonials</a></li>
          <li><a href="">Blogs</a></li>
          <li><a href="#contact-us">Contact Us</a></li>
-         <button class="btn">Hire Developers <i class="fa-solid fa-arrow-right"></i></button>
-    </ul>
-     <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
+         <button class="btn" id="hire-d">Hire Developers <i class="fa-solid fa-arrow-right"></i></button>
+      </ul>
+           <div class="menu-icon">
+             <i id="bar" class="fa-solid fa-bars"></i>
+          </div>
+ </div>
 </nav>
 
 <div class="hero" id="home">
@@ -70,7 +87,7 @@
         <p>Experience accelerated business growth with our fully scalable and future-ready solutions. Shubpy Solutions delivers transformative services that elevate your business and offer a competitive edge.
        Experience accelerated business growth with our fully scalable and future-ready solutions. Shubpy Solutions delivers transformative services that elevate your business and offer a competitive edge.
        </p>
-       <button class="btn">Explore Services <i class="fa-solid fa-arrow-right"></i></button> 
+       <button class="btn"  id="explore-btn">Explore Services <i class="fa-solid fa-arrow-right"></i></button> 
  
     </div>
 </section>
@@ -96,20 +113,20 @@
 
     <div class="right">
         <div class="counter-card">
-            <h1>12+</h1>
-            <h3>Year's of Experience</h3>
+            <h1 class="count" data-target="12">0+</h1>
+            <p>Year's of Experience</p>
         </div>
         <div class="counter-card">
-            <h1>5000+</h1>
-            <h3>Successful Projects</h3>
+            <h1 class="count" data-target="5000">0+</h1>
+            <p>Successful Projects</p>
         </div>
         <div class="counter-card">
-            <h1>100+</h1>
-            <h3>Expert Professionals</h3>
+            <h1 class="count" data-target="100">0+</h1>
+            <p>Expert Professionals</p>
         </div>
         <div class="counter-card">
-            <h1>600+</h1>
-            <h3>Year's of Experience</h3>
+           <h1 class="count" data-target="600">0+</h1>
+            <p>Year's of Experience</p>
         </div>
         
     </div>
@@ -122,32 +139,64 @@
 
 
 <section class="services-section" id="service">
-    
-    <div class="service-btn">
-        <button>Staff Agumentation</button>
-         <button>MVP Creation</button>
-        <button>Products for Buy</button>
-    </div>
+  <div class="service-btn">
+    <button class="tab-btn" onclick="showTab(1)">Staff Augmentation</button>
+    <button class="tab-btn" onclick="showTab(2)">MVP Creation</button>
+    <button class="tab-btn" onclick="showTab(3)">Products for Buy</button>
+  </div>
 
-    <div class="service-content">
-        <div class="service-img">
-            <img src="img/about.png" alt="Service Image">
-        </div>
-        <div class="service-text">
-            <h1>Hire<span id="Shubpy"> Remote</span> Developers</h1>
-            <p>Experience accelerated business growth with our fully scalable and future-ready solutions. Shubpy Solutions delivers transformative services that elevate your business.</p>
-            <ul>
-            <li><i class="fas fa-check"></i>100% In-house Developers</li>
-             <li><i class="fas fa-check"></i>1 week Risk-free trial</li>
-              <li><i class="fas fa-check"></i>100% Customer Satisfaction</li>
-               <li><i class="fas fa-check"></i>Trusted technology partner</li>
-            </ul>
-            
-        </div>
+  <!-- Tab 1 -->
+  <div class="service-content" id="tab-1">
+    <div class="service-img">
+      <img src="img/about.png" alt="Service Image">
     </div>
+    <div class="service-text">
+      <h1>Hire<span id="Shubpy"> Remote</span> Developers</h1>
+      <p>Experience accelerated business growth with our fully scalable and future-ready solutions. Shubpy Solutions delivers transformative services that elevate your business.</p>
+      <ul>
+        <li><i class="fas fa-check"></i>100% In-house Developers</li>
+        <li><i class="fas fa-check"></i>1 week Risk-free trial</li>
+        <li><i class="fas fa-check"></i>100% Customer Satisfaction</li>
+        <li><i class="fas fa-check"></i>Trusted technology partner</li>
+      </ul>
+    </div>
+  </div>
 
-    
+  <!-- Tab 2 -->
+  <div class="service-content" id="tab-2" style="display: none;">
+    <div class="service-img">
+      <img src="img/about.png" alt="Service Image">
+    </div>
+    <div class="service-text">
+      <h1>Launch<span id="Shubpy"> MVP</span> Faster</h1>
+      <p>Quickly validate your ideas with our MVP development service for startups and enterprises.</p>
+      <ul>
+        <li><i class="fas fa-check"></i>Rapid Prototyping</li>
+        <li><i class="fas fa-check"></i>Real Market Feedback</li>
+        <li><i class="fas fa-check"></i>Agile Process</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tab 3 -->
+  <div class="service-content" id="tab-3" style="display: none;">
+    <div class="service-img">
+      <img src="img/about.png" alt="Service Image">
+    </div>
+    <div class="service-text">
+      <h1>Buy<span id="Shubpy"> Products</span> from Shubpy</h1>
+      <p>Choose from a range of digital products ready for instant use and integration.</p>
+      <ul>
+        <li><i class="fas fa-check"></i>Prebuilt Solutions</li>
+        <li><i class="fas fa-check"></i>Easy Integration</li>
+        <li><i class="fas fa-check"></i>Budget Friendly</li>
+      </ul>
+    </div>
+  </div>
 </section>
+
+
+
 
 
 <section class="solution-provide">
@@ -280,7 +329,7 @@
      <h1><span id="Shubpy">Technologies</span> We Work With</h1>
         <div class="tech-content">
        
-        <button id="tab">Backend</button>
+        <button class id="tab">Backend</button>
         <button>Frontend</button>
         <button>Mobile</button>
         <button>CMS</button>
@@ -325,7 +374,7 @@
 <!-- 
 Review Section -->
 
-<div class="heading">
+<div class="heading" id="test">
         <h1>LATEST REVIEW</h1>
 </div>
 
@@ -387,25 +436,49 @@ Review Section -->
                
 
                 <h3>Upwork Client</h3>
+                
         </div>
-    </div>
 
+         <div class="review-box">
+                 <h1>Completed Sucessfully!</h1>
+                 <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                 <p>It has been such a stress-free experience to work with Harpreet. She took care of all the deliverables diligently, items were delivered on time and she is...</p>
+               
+
+                <h3>Upwork Client</h3>
+                
+        </div>
+
+
+
+
+
+
+
+    </div>
+</section>
+   
     <div class="review-img">
         <div class="review-content">
             <img src="img/review.png" alt="Video">
         </div>
         <div class="client-review"> 
             
-           <p><i class="fas fa-quote-left"></i>Shubham has been great to work with. He is responsive and was an asset to the team. He also has a good network of other freelancers who can help on projects, which is very useful at times if needed. Though I mostly just worked with him directly. I would not hesitate to work with him again  <i class="fas fa-quote-right"></i></p>
+           <p><img src="img/quote1.png" alt="quote">Shubham has been great to work with. He is responsive and was an asset to the team. He also has a good network of other freelancers who can help on projects, which is very useful at times if needed. Though I mostly just worked with him directly.I would not hesitate to work with him again<img src="img/quote2.png" alt="quote2"></p>
            <h4>Henry</h4>
            <h5>Founder of Any company</h5>
         
         </div>
         
 
+    
     </div>
     
-</section>
+
 
 
 
@@ -548,7 +621,7 @@ Review Section -->
 </div>
 
 
-
+<hr style=" border: 1px solid #FFFFFF21; ; max-width: 1320px; margin: 0 auto; margin-bottom: 37px;">
 <div class="footer-copyright">
     <div class="copyright">
         <div class="copyright-text">
@@ -569,24 +642,21 @@ Review Section -->
 
 
 
+<!-- <script>
 
+ let icon = document.querySelector(".menu-icon");
+ let ul = document.querySelector("ul");
 
- <script>
-        
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
+ icon.addEventListener("click", ()=>{
+    ul.classList.toggle("showData");
+     
+    if(ul.className == "showData"){
+        document.getElementById("bar").className= "fa-solid fa-xmark";
+    }else{
+        document.getElementById("bar").className= "fa-solid fa-bars";
 
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "300px";
-            }
-            else{
-                menuList.style.maxHeight = "0px";
-            }
-        }
-
-
+    }
+ })
 
 
 
@@ -599,32 +669,15 @@ Review Section -->
 
 
 
-//   const slides = document.querySelectorAll('.review-box');
-//   let count = 0;
-
-//   // Set initial left positions
-//   slides.forEach(function(slide, index) {
-//     slide.style.left = `${index * 100}%`;
-//   });
-
-//   // Slide function
-//   function slider() {
-//     slides.forEach(function(curVal) {
-//       curVal.style.transform = `translateX(-${count * 100}%)`;
-//     });
-//   }
-
-//   // Auto-slide every 1 second
-//   setInterval(function () {
-//     count++;
-//     if (count === slides.length) {
-//       count = 0;
-//     }
-//     slider();
-//   }, 1000); // faster = 1 second
-// </script>
 
 
-    <script src="script.js"></script>
+</script> -->
+
+<script src="js/script.js"></script>
+ 
+
+
+
+
 </body>
 </html>
