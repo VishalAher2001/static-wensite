@@ -514,10 +514,12 @@
   }
 
   .counter-card h1 {
-    font-size: 30px;
+    font-size: 28px;
+    margin-top: -20px;
   }
-  .counter-card h3 {
+  .counter-card p {
     font-size: 15px;
+    margin-top: -20px;
   }
   */ .service-content {
     flex-wrap: nowrap;
@@ -800,9 +802,14 @@
   .contact-text p {
     max-width: 500px;
   }
+
+  .trusted-partner {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1601px) {
   .trusted-partner {
     flex-wrap: nowrap;
     gap: 20px;

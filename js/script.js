@@ -130,3 +130,31 @@ counters.forEach((counter) => {
 
   updateCount();
 });
+
+const techButtons = document.querySelectorAll(".tech-content button");
+
+techButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    techButtons.forEach((btn) => btn.classList.remove("active")); // remove active from all
+    button.classList.add("active"); // add active to clicked one
+  });
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(function (l) {
+  if (l.search[1] === "/") {
+    var decoded = l.search
+      .slice(1)
+      .split("&")
+      .map(function (s) {
+        return s.replace(/~and~/g, "&");
+      })
+      .join("?");
+    window.history.replaceState(
+      null,
+      null,
+      l.pathname.slice(0, -1) + decoded + l.hash
+    );
+  }
+})(window.location);

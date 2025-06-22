@@ -642,10 +642,24 @@ ul li a:hover {
   line-height: 100%;
 }
 
-.tech-content button:hover {
+/* .tech-content button:hover {
   background-color: #ffff;
   color: #000000;
+} */
+
+/* button:hover,
+button:active{
+  background-color: #fff;
+  color: #111111;
+} */
+
+.tech-content button.active {
+  background-color: #ffffff; /* white background */
+  color: #000000;            /* black text */
 }
+
+
+
 .lang-img {
   display: flex;
   align-items: center;
@@ -956,6 +970,9 @@ ul li a:hover {
 .copyright-icons i {
   margin-inline: 8px;
 }
+
+
+
 
 /* ******************************************************************************************************************************** */
 .slick-prev, .slick-next {
