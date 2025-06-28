@@ -297,6 +297,117 @@
   }
 }
 
+@media (max-width: 400px) {
+  .hero {
+    margin-bottom: 20px;
+  }
+  .about-section {
+    margin: 0;
+  }
+  .trusted-partner,
+  .services-section {
+    margin: 50px auto;
+  }
+  .heading h1 {
+    font-size: 25px;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+  }
+  .about-section {
+    gap: 10px;
+  }
+  .solution-card {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .shubpy-img img {
+    width: 360px;
+    height: auto;
+    object-fit: contain;
+  }
+  .shubpy-quote {
+    margin: 2rem auto;
+    max-width: 350px;
+    height: auto;
+  }
+  .quote-text p {
+    font-size: 18px;
+  }
+  .shubpy-card {
+    width: 300px;
+    height: 330px;
+  }
+  .head-text h1 {
+    font-size: 16px;
+    word-break: break-all;
+  }
+  .head-text p {
+    text-align: start;
+  }
+
+  .technology h1 {
+    padding: 39px;
+    font-size: 25px;
+    line-height: 1.3;
+  }
+  .tech-content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .lang-img {
+    flex-direction: column;
+  }
+  .review-head h1 {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+  .review-box {
+    width: 350px;
+  }
+  .about-shubpy {
+    margin: 0;
+  }
+  .technology {
+    margin: 20px;
+  }
+  .contact-text h1 {
+    font-size: 25px;
+  }
+  .info-btn {
+    margin-left: 3rem;
+  }
+  .review-head h1 {
+    padding-bottom: 50px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer {
+    gap: 0;
+    text-align: center;
+  }
+  .divider {
+    margin: 10px auto;
+  }
+  .copyright-text,
+  .copyright-icons {
+    margin: 0 auto;
+  }
+  .counter-card {
+    width: 230px;
+    height: 150px;
+  }
+  .count {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .counter-card p {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 651px) and (max-width: 950px) {
   .logo img {
     margin-left: 10px;
