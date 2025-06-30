@@ -1,14 +1,25 @@
 let icon = document.querySelector(".menu-icon");
-let ul = document.querySelector("ul");
+let barIcon = document.getElementById("bar");
+let menu = document.getElementById("menubar");
+let links = document.querySelectorAll(".navbar");
 
+// Toggle menu on hamburger icon click
 icon.addEventListener("click", () => {
-  ul.classList.toggle("showData");
+  menu.classList.toggle("showData");
 
-  if (ul.className == "showData") {
-    document.getElementById("bar").className = "fa-solid fa-xmark";
+  if (menu.classList.contains("showData")) {
+    barIcon.className = "fa-solid fa-xmark";
   } else {
-    document.getElementById("bar").className = "fa-solid fa-bars";
+    barIcon.className = "fa-solid fa-bars";
   }
+});
+
+// Hide menu when any menu link is clicked
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("showData");
+    barIcon.className = "fa-solid fa-bars";
+  });
 });
 
 // $(document).ready(function () {
